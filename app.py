@@ -1,6 +1,12 @@
 import streamlit as st
 import pickle
 
+# Set up the page configuration (title and icon)
+st.set_page_config(
+    page_title="Tweet Sentiment Predictor",
+    page_icon="🤖",  # You can use an emoji or a local file path for the icon
+)
+
 # Load the saved model and vectorizer
 with open('Model/model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
